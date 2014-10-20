@@ -5,3 +5,4 @@ Feature: Formulario
 		When presiono el boton "Jugar"
 		Then veo al jugador1 "Jorge" y al jugador2 "Pedro"
 		Then el jugador1 tiene el puntaje "0" al igual que el jugador2 que tiene "0"
+		Then el jugador1 tiene el boton "Anotar" al igual que el jugador2 que tiene el boton "Anotar"

@@ -1,20 +1,38 @@
-
-
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <table>
 <tr>
 	<td>
-		<p class="jugador1"><%=@jugador1%></p>
+		<p id="nombre_jugador1"><%=@jugador1%></p>
 	</td>
 	<td>
-		<p class="jugador2"><%=@jugador2%></p>
+		<p id="nombre_jugador2"><%=@jugador2%></p>
 	</td>
 </tr>
 <tr>
 	<td>
-		<p class="jugador1"><%=@puntaje1%></p>
+		<p id="puntaje_jugador1"><%=@puntaje1%></p>
 	</td>
 	<td>
-		<p class="jugador2"><%=@puntaje2%></p>
+		<p id="puntaje_jugador2"><%=@puntaje2%></p>
 	</td>
 </tr>
+<tr>
+	<form action="/jugar" method="post">
+		<input type="hidden" name="jugador1" value="<%=@jugador1%>">
+		<input type="hidden" name="jugador2" value="<%=@jugador2%>">
+		<input type="hidden" id="ganador" name="ganador" value="1">
+		<td>
+			<input type="submit" id="anotar_jugador1" value="Anotar">
+		</td>
+		<td>
+			<input type="submit" id="anotar_jugador2" value="Anotar">
+		</td>
+	</form>
+</tr>
 </table>
+
+<script>
+	$("#anotar_jugador2").click(function(){
+		$("#ganador").val("2");
+	});
+</script>
