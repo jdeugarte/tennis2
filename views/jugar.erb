@@ -1,4 +1,4 @@
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!--script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script-->
 <table>
 <tr>
 	<td>
@@ -17,22 +17,27 @@
 	</td>
 </tr>
 <tr>
-	<form action="/jugar" method="post">
+	<form action="/jugar" method="post" id="form1">
 		<input type="hidden" name="jugador1" value="<%=@jugador1%>">
 		<input type="hidden" name="jugador2" value="<%=@jugador2%>">
 		<input type="hidden" id="ganador" name="ganador" value="1">
 		<td>
 			<input type="submit" id="anotar_jugador1" value="Anotar">
 		</td>
+		</form>
+		<form action="/jugar" method="post" id="form2">
+		<input type="hidden" name="jugador1" value="<%=@jugador1%>">
+		<input type="hidden" name="jugador2" value="<%=@jugador2%>">
+		<input type="hidden" id="ganador" name="ganador" value="2">
 		<td>
 			<input type="submit" id="anotar_jugador2" value="Anotar">
 		</td>
-	</form>
+		</form>
 </tr>
 </table>
 
-<script>
+<!--script>
 	$("#anotar_jugador2").click(function(){
 		$("#ganador").val("2");
 	});
-</script>
+</script-->

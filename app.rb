@@ -11,9 +11,13 @@ get '/' do
 end
 
 post '/jugar' do
-	if params[:ganador]=='1'
+	case params[:ganador]
+	when "0"
+		j1.empezar
+		j2.empezar
+	when "1"
 		j1.anotar(j2)
-	elsif params[:ganador]=='2'
+	when "2"
 		j2.anotar(j1)
 	end
 	@jugador1=params[:jugador1]
