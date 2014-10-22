@@ -22,7 +22,7 @@
 		<input type="hidden" name="jugador2" value="<%=@jugador2%>">
 		<input type="hidden" id="ganador" name="ganador" value="1">
 		<td>
-			<input type="submit" id="anotar_jugador1" value="Anotar">
+			<button type="submit" id="anotar_jugador1" <%if @pungaje1=="GANADOR!"||@puntaje2=="GANADOR!"%> disabled <%end%>> Anotar</button>
 		</td>
 		</form>
 		<form action="/jugar" method="post" id="form2">
@@ -30,11 +30,13 @@
 		<input type="hidden" name="jugador2" value="<%=@jugador2%>">
 		<input type="hidden" id="ganador" name="ganador" value="2">
 		<td>
-			<input type="submit" id="anotar_jugador2" value="Anotar">
+			<button type="submit" id="anotar_jugador2" <%if @pungaje1=="GANADOR!"||@puntaje2=="GANADOR!"%> disabled <%end%>>Anotar</button>
 		</td>
 		</form>
 </tr>
 </table>
+		<a href="/">Inicio</a>
+
 
 <!--script>
 	$("#anotar_jugador2").click(function(){
