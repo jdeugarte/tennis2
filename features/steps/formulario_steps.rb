@@ -19,6 +19,6 @@ Then(/^el jugador(\d+) tiene el puntaje "(.*?)" al igual que el jugador(\d+) que
 end
 
 Then(/^el jugador(\d+) tiene el boton "(.*?)" al igual que el jugador(\d+) que tiene el boton "(.*?)"$/) do |nro_jugador1, boton1, nro_jugador2, boton2|
-  last_response.body.should =~ /#{'"anotar_jugador'+nro_jugador1+'" value="'+boton1+'">'}/m
-  last_response.body.should =~ /#{'"anotar_jugador'+nro_jugador2+'" value="'+boton2+'">'}/m
+  last_response.body.should =~ /"anotar_jugador#{nro_jugador1}">#{boton1}/m
+  last_response.body.should =~ /"anotar_jugador#{nro_jugador2}">#{boton2}/m
 end
