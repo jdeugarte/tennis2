@@ -41,6 +41,8 @@ class Jugador
 			num=2
 		when 40
 			num=3
+		when 'GANADOR!'
+			num=4
 		end
 		
 		num
@@ -50,5 +52,5 @@ class Jugador
 		@puntaje=0
 	end
 
-	attr_accessor :puntaje
+	attr_accessor :puntaje,:nombre
 end

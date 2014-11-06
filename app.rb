@@ -1,13 +1,17 @@
 require 'sinatra'
 require './jugador'
 
+#@vector_jugadores=[]
+
 j1=Jugador.new
 j2=Jugador.new
 
 get '/' do
 	j1.puntaje=0
 	j1.puntaje=0
+	#@vector_jugadores
 	erb :bienvenida
+	
 end
 
 post '/jugar' do
@@ -24,6 +28,6 @@ post '/jugar' do
 	@jugador2=params[:jugador2]
 	@puntaje1=j1.puntaje
 	@puntaje2=j2.puntaje
-	erb :jugar
+		erb :jugar
 end
 
